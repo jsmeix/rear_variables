@@ -44,7 +44,9 @@ globally without 'local' across multiple scripts, communicating state across
 scripts using non-uppercase names:
 
 Variable: 'v' (152 scripts)
-  Description: Set in usr/sbin/rear (v="" or v="-v"). Passed to commands (rm $v, cp $v, etc.) across 151 scripts. Violates both ALL-CAPS and 'no one-letter names'.
+  Description: Set in usr/sbin/rear (v="" or v="-v").
+               Passed to commands (rm $v, cp $v, etc.) across 151 scripts.
+               Violates both ALL-CAPS and 'no one-letter names'.
   Sample files:
     - ./usr/sbin/rear
     - ./usr/share/rear/backup/BLOCKCLONE/default/150_save_copy_of_prefix_dir.sh
@@ -54,7 +56,9 @@ Variable: 'v' (152 scripts)
     - ... and 147 more files
 
 Variable: 'backuparchive' (27 scripts)
-  Description: Set in prep/NETFS/default/070_set_backup_archive.sh and read across 26 output/restore/verify scripts. Explicitly acknowledged in comments: '# FIXME: backuparchive is no local variable (regardless that it is lowercased)'.
+  Description: Set in prep/NETFS/default/070_set_backup_archive.sh and read across 26 output/restore/verify scripts.
+               Explicitly acknowledged in comments:
+               '# FIXME: backuparchive is no local variable (regardless that it is lowercased)'.
   Sample files:
     - ./usr/share/rear/backup/BLOCKCLONE/default/500_start_clone.sh
     - ./usr/share/rear/backup/NETFS/default/500_make_backup.sh
@@ -64,7 +68,8 @@ Variable: 'backuparchive' (27 scripts)
     - ... and 22 more files
 
 Variable: 'verbose' (20 scripts)
-  Description: Set in usr/sbin/rear (verbose="" or verbose="--verbose"). Used across 19 scripts (mkdir $verbose, tar $verbose, etc.).
+  Description: Set in usr/sbin/rear (verbose="" or verbose="--verbose").
+               Used across 19 scripts (mkdir $verbose, tar $verbose, etc.).
   Sample files:
     - ./usr/sbin/rear
     - ./usr/share/rear/backup/YUM/default/500_make_backup.sh
